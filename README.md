@@ -7,8 +7,8 @@
 + Для получения информации о фильмах используется API [omdbapi.com](http://www.omdbapi.com)
 + для заполнения базы со стороннего api используется команда в crontab
 + подробно:
-    http://localhost:8080/api/movies/ здесь все данные по фильмам с указанными героями
-    http://localhost:8080/api/create/ здесь создаем имя героя
+    http://nergilz.pythonanywhere.com/api/movies/ все данные по фильмам с указанными героями
+    http://nergilz.pythonanywhere.com/create/ создаем имя героя
 
 ### Требования (requirements)
 + [virtualenv](https://virtualenv.pypa.io/en/latest/)
@@ -37,11 +37,11 @@ http://localhost:8080/api/authtoken/token/logout/
 
 #### Пример POST запроса на подниску
 ```bash
-curl -u ad:adpass -X POST http://127.0.0.1:8000/api/create/ -H "Content-Type: application/json" -d "{'name':'Hulk'}"
+curl -u ad:adpass -X POST http://nergilz.pythonanywhere.com/api/create/ -H "Content-Type: application/json" -d "{'name':'Hulk'}"
 ```
 #### Пример получения данных
 ```bash
-curl -u ad:adpass GET http://127.0.0.1:8000/api/movies/
+curl -u ad:adpass GET http://nergilz.pythonanywhere.com/api/movies/
 ```
 
 ---
