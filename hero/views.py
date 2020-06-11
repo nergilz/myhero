@@ -1,3 +1,6 @@
+from django.views.generic.base import View
+from django.shortcuts import render
+
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -17,3 +20,7 @@ class MovieListView(APIView):
 class HeroCreateView(generics.CreateAPIView):
     serializer_class = HeroCreateSerializer
 
+
+class BaseView(View):
+    def get(self, request):
+        return render(request, "base.html", {"":""})

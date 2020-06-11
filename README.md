@@ -8,7 +8,7 @@
 + для заполнения базы со стороннего api используется команда в crontab
 + подробно:
     http://nergilz.pythonanywhere.com/api/movies/ все данные по фильмам с указанными героями
-    http://nergilz.pythonanywhere.com/create/ создаем имя героя
+    http://nergilz.pythonanywhere.com/api/create/ создаем имя героя
 
 ### Требования (requirements)
 + [virtualenv](https://virtualenv.pypa.io/en/latest/)
