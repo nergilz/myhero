@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'hero',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [

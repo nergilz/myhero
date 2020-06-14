@@ -35,13 +35,25 @@ http://localhost:8080/api/authtoken/token/logout/
 ./manage.py tick
 ``` 
 
-#### Пример POST запроса на подниску
+#### Получение токена
+```bash
+curl -X POST http://127.0.0.1:8000/api-token-auth/ --data "username=ad&password=adpass"
+```
+```bash
+curl -X POST http://nergilz.pythonanywhere.com/api-token-auth/ --data "username=ad&password=adpass"
+```
+
+#### POST запрос - подписка по имени героя 
 ```bash
 curl -u ad:adpass -X POST http://nergilz.pythonanywhere.com/api/create/ -H "Content-Type: application/json" -d "{'name':'Hulk'}"
 ```
+
 #### Пример получения данных
 ```bash
 curl -u ad:adpass GET http://nergilz.pythonanywhere.com/api/movies/
+```
+```bash
+curl -LX GET http://nergilz.pythonanywhere.com/api/movies/ -H "Authorization: Token 8f4c9ab5ffc252f26c864c50ef85be400268c42d"
 ```
 
 ---
@@ -53,9 +65,8 @@ curl -u ad:adpass GET http://nergilz.pythonanywhere.com/api/movies/
 
 #### вопросы:
 + заполнение базы через management/command, можно было через celery, 
-    но как сделать "на лету" при оформлении подписки я честно пока не знаю
-+ логин по токену, можно но в условии нет
-+ перевод писать руками в админке
+    но как сделать "на лету" при оформлении подписки я пока не знаю
++ перевод названия фильма вносить в админке
 
 ---
 созданно как тестовое для [ооо"Expotestdrive"](https://potokconf.ru/)
