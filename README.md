@@ -17,12 +17,11 @@
 + [Django](https://docs.djangoproject.com/)
 + [django-rest-framework](https://www.django-rest-framework.org/)
 
-### API endpoints, через браузер
+### API endpoints
 ```bash
 http://localhost:8080/api/movies/
 http://localhost:8080/api/create/
-http://localhost:8080/api/authtoken/token/login/
-http://localhost:8080/api/authtoken/token/logout/
+http://localhost:8080/api-token-auth/
 ```
 ### Установка зависимостей
 ```bash
